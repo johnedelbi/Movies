@@ -59,7 +59,9 @@ const moviesController = {
         if (movieIsExist) {
             res.json(movieIsExist);
         } else {
-            res.send('movie not found');
+            res.status(404).render('404', {
+                title: 'movie not found'
+            });
         }
     },
     addNewMovie: (req, res) => {
@@ -77,7 +79,9 @@ const moviesController = {
             updateMovieById(movies, id, name, src);
             res.json(movies);
         } else {
-            res.send('movie not found');
+            res.status(404).render('404', {
+                title: 'movie not found'
+            });
         }
     },
     deleteMovie: (req, res) => {
@@ -87,7 +91,9 @@ const moviesController = {
             movies = movies.filter((movie) => movie.id !== id);
             res.json(movies);
         } else {
-            res.send('movie is not exist');
+            res.status(404).render('404', {
+                title: 'movie not found'
+            });
         }
     }
 };
