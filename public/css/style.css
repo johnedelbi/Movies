@@ -1,9 +1,25 @@
 *{
     text-align: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 1.5em;
 }
 body{
-    background-color: black;
-    color: aqua;
+    background-color: #0d1321;
+    color: #f0ebd8;
+}
+h1{
+    font-size: 2em;
+    color: #3e5c76;
+}
+.not-found{
+    font-size: 2em;
+}
+
+.container{
+    border: 2px solid #f0ebd8 ;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.single-movie-img{
+    max-width: 250px;
 }

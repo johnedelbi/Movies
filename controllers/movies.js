@@ -51,13 +51,13 @@ const updateMovieById = (arr, Id, name, src) => {
 
 const moviesController = {
     getMovies: (req, res) => {
-        res.json(movies);
+        res.status(200).render('movies', { movies });
     },
     getMovieById: (req, res) => {
         const { id } = req.params;
         const movieIsExist = getMovieById(id);
         if (movieIsExist) {
-            res.json(movieIsExist);
+            res.status(200).render('movie', { movieIsExist });
         } else {
             res.status(404).render('404', {
                 title: 'movie not found'
